@@ -1,6 +1,7 @@
 //THIS is a test comment to see if this works on GIT!
 //What happened?
 //Did it work?
+//Yes, now let's create a second branch of this.
 public class DrinksCalculatorController{
 	//Private
 	private String currentUserId;
