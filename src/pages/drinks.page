@@ -1,0 +1,35 @@
+<apex:page sidebar="false" controller="DrinksCalculatorController" showHeader="false">
+	<h1>Consumed Drinks Calculator</h1><br/>
+	<h1>Hello, {!currentUserFirstName}!</h1><br/>
+	<h2>Here you can keep track of what you and others have drunk. Just click a product you have consumed.</h2><br/>
+	
+	
+	<!--    Let's add buttons to products    -->
+	
+	<apex:form id="productBlock">
+		<h2>Products:</h2><br/>
+		
+		<apex:repeat value="{!products}" var="product"> 
+			<apex:commandButton action="{!consume}" value="Consume {!product.Name}" reRender="hiddenBlock">
+				<apex:param assignTo="{!clickedProduct}" value="{!product.Id}" />
+			</apex:commandButton>
+		</apex:repeat>
+	</apex:form>
+	
+	<apex:pageBlock id="hiddenBlock" rendered="false"></apex:pageBlock>	
+	
+	
+  	<!-- Printing the Drinkers and their consumed drinks -->
+	
+	<apex:form >
+	  	<apex:dataList value="{!drinkers}" var="drinker">
+	      	<h2>{!drinker}</h2>
+	      	<!--  
+	      	<apex:repeat value="{!getOnesDrinks}" var="consumedDrink">
+	          	<br />
+	          	{!consumedDrink.Drink_Type__r.Name} : {!consumedDrink.Quantity__c} 
+	      	</apex:repeat>
+	      	-->
+	  	</apex:dataList>
+  	</apex:form>
+</apex:page>

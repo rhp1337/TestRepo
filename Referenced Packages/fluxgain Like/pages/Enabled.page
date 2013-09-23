@@ -1,0 +1,8 @@
+<apex:page showHeader="false" sidebar="false" standardStylesheets="false">
+  <apex:outputPanel style="width:141px;margin:0 auto" layout="block" id="centerPanel">
+    <apex:outputLink target="_top" value="{!URLFOR($Page.fluxgain_Like__About, 'fluxgainLikeAboutLink')}">
+      <apex:image id="fluxgainLikeLogo" value="{!URLFOR($Resource.fluxgain_Like__fluxgain_Like, 'fluxgainLikeAppLogo.png')}" alt="fluxgain Like About">
+      </apex:image>
+    </apex:outputLink>
+  </apex:outputPanel>
+</apex:page>

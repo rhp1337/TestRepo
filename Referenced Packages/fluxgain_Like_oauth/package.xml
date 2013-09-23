@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>fluxgain_Like_oauth</fullName>
+    <apiAccessLevel>Unrestricted</apiAccessLevel>
+    <modules>
+        <module>
+            <label>fluxgain_Like_oauth</label>
+            <moduleType>connected</moduleType>
+            <name>fluxgain_Like_oauth</name>
+            <types>
+                <members>fluxgain_Like__fluxgain_Like_oauth</members>
+                <name>Module</name>
+            </types>
+            <version>8.0</version>
+        </module>
+    </modules>
+    <namespacePrefix>fluxgain_Like</namespacePrefix>
+    <version>27.0</version>
+</Package>

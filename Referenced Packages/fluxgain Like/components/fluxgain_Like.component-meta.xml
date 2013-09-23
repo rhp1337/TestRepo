@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApexComponent xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>28.0</apiVersion>
+    <description>Add fluxgain Like button to a web page using parameters for customisation. Please see http://fluxgain.com/like/install/ for further details.</description>
+    <label>fluxgain Like</label>
+</ApexComponent>

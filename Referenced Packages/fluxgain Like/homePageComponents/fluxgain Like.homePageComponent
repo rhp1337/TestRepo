@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<HomePageComponent xmlns="http://soap.sforce.com/2006/04/metadata">
+    <body>&lt;div id=&quot;fluxgainLikeHomePageComponent&quot; class=&quot;fluxgain-like-button&quot; style=&quot;overflow:hidden;&quot;&gt;&lt;/div&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+  (function() {
+    var fl = document.createElement(&quot;script&quot;);
+    fl.type = &quot;text/javascript&quot;;
+    fl.async = true;
+    fl.src = &quot;https://chatter.fluxgainlike.com/js/flike.js&quot;;
+    var s = document.getElementsByTagName(&quot;script&quot;)[0];
+    s.parentNode.insertBefore(fl, s);
+  })();
+&lt;/script&gt;</body>
+    <pageComponentType>htmlArea</pageComponentType>
+    <width>narrow</width>
+</HomePageComponent>

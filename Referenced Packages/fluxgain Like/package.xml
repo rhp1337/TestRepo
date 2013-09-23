@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>fluxgain Like</fullName>
+    <apiAccessLevel>Restricted</apiAccessLevel>
+    <namespacePrefix>fluxgain_Like</namespacePrefix>
+    <types>
+        <members>fluxgain_Like</members>
+        <name>ApexComponent</name>
+    </types>
+    <types>
+        <members>About</members>
+        <members>Enabled</members>
+        <name>ApexPage</name>
+    </types>
+    <types>
+        <members>fluxgain_Like</members>
+        <name>CustomApplication</name>
+    </types>
+    <types>
+        <members>About</members>
+        <name>CustomTab</name>
+    </types>
+    <types>
+        <members>fluxgain_Like</members>
+        <members>fluxgain_Like/fluxgain_Like_app_logo.png</members>
+        <members>fluxgain_Like/fluxgain_Like_cross.png</members>
+        <name>Document</name>
+    </types>
+    <types>
+        <members>fluxgain Like</members>
+        <members>fluxgain Like enabled</members>
+        <name>HomePageComponent</name>
+    </types>
+    <types>
+        <members>fluxgain_Like</members>
+        <name>StaticResource</name>
+    </types>
+    <version>27.0</version>
+</Package>

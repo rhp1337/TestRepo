@@ -1,0 +1,49 @@
+<apex:page title="About | fluxgain Like" tabStyle="About__tab">
+
+<apex:sectionHeader title="fluxgain Like"/>
+
+<apex:pageBlock title="About">
+
+<p>
+The fluxgain Like button is a way to quickly chatter like a web page directly with in web page itself, it works
+the in same way as facebook, google plus, linkedin, and twitter buttons except that the chatter like is saved
+into your salesforce environment/org where only you and other salesforce users (in the same salesforce
+environment/org) can see it.
+</p>
+
+<p>
+To see it in action click on the button below.
+</p>
+
+<p>
+<c:fluxgain_Like /> 
+</p>
+
+<p>
+If you see a message about ip restrictions, invalid login hours, etc when clicking on the
+button ask your salesforce system adminstrator to white list fluxgain Like first.
+</p>
+
+<p>
+You can also add the fluxgain Like button to other web pages, such as your intranet, external public web pages,
+non salesforce web page or even in other web applications such as Microsoft Sharepoint for example. Just ask the
+owner of the web page to put some boilerplate text onto the page then the button will be available for use.
+</p>
+
+<p>
+The button can also be customised into several predetermined sizes and colours by changing the bolierplate
+text that is placed on the web page. There is also a visualforce component to use if your web page is written
+as a salesforce visualforce page.
+</p>
+
+<p>
+<c:fluxgain_Like divId="fluxgainConfig2" layout="top_wide" buttonColour="black"></c:fluxgain_Like>
+</p>
+
+<p>
+For further details about set up please visit <a id="fluxgainLikeInstall" name="fluxgainLikeInstall" href="http://fluxgain.com/like/install">fluxgain Like install</a> pages
+</p>
+
+</apex:pageBlock>
+
+</apex:page>

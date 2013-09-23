@@ -1,0 +1,66 @@
+<apex:component layout="none" access="global">
+    <apex:attribute name="canonicalUrl"
+        description="Canonical Url to be used by fluxgain Like (default is current page url), which gets saved into chatter feed. A canonical url may be required if several different urls point to the same web page, for example the following urls are considered different by fluxgain Like http://fluxgain.com, http://www.fluxgain.com, http://fluxgain.com/ but refer to same web page"
+        type="string"
+        access="global" />
+    <apex:attribute name="title"
+        description="Title to be used by fluxgain Like (default is current page title), which gets saved into chatter feed"
+        type="string"
+        access="global" />
+    <apex:attribute name="buttonColour"
+        description="Colour for button (possible values are orange or black)"
+        type="string"
+        access="global"
+        default="orange" />
+    <apex:attribute name="layout"
+        description="Layout for button (possible values are right_wide, right_short, top_wide or top_short)"
+        type="string"
+        access="global"
+        default="right_wide" />
+    <apex:attribute name="javascriptCanonicalUrl"
+        description="Javascript function that returns a canonical Url as a string to be used by fluxgain Like (overrides both CanonicalUrl value and current page url). The called javascript function has no arguments and must be defined before calling fluxgain Like button"
+        type="string"
+        access="global" />
+    <apex:attribute name="javascriptTitle"
+        description="Javascript function that returns the title as a string to be used by fluxgain Like (overrides both title value and current page title). The called javascript function has no arguments and must be defined before calling fluxgain Like button"
+        type="string"
+        access="global" />
+    <apex:attribute name="divId"
+        description="Id in the HTML div tag for javascript config, only needed in unlikely event when more than one like button is on the screen"
+        type="string"
+        access="global"
+        default="fluxgainLikeConfig"/>
+    <div class="fluxgain-like-button" data-config="{!divid}" style="overflow:hidden;"></div>
+    <div id="{!divid}FluxgainLikeUrl" style="display:none">{!canonicalUrl}</div>
+    <div id="{!divid}FluxgainLikeTitle" style="display:none">{!title}</div>
+    <div id="{!divid}FluxgainLikeJavascriptUrl" style="display:none">{!javascriptCanonicalUrl}</div>
+    <div id="{!divid}FluxgainLikeJavascriptTitle" style="display:none">{!javascriptTitle}</div>
+    <script type="text/javascript" src="https://chatter.fluxgainlike.com/js/flike.js"></script>
+    <script type="text/javascript">
+    var {!divid};
+    (function() {
+        function isEmpty(str){return(!str||0===str.length);}
+        function callFunction(func){return(this[func].apply(this,null));}
+        theUrl=document.getElementById('{!divid}FluxgainLikeUrl').innerHTML;
+        theTitle=document.getElementById('{!divid}FluxgainLikeTitle').innerHTML;
+        theJavascriptUrl=document.getElementById('{!divid}FluxgainLikeJavascriptUrl').innerHTML;
+        theJavascriptTitle=document.getElementById('{!divid}FluxgainLikeJavascriptTitle').innerHTML;
+        if(isEmpty(theUrl)){theUrl=window.location.href;}
+        if(isEmpty(theTitle)){theTitle=document.title;}
+        if(!(isEmpty(theJavascriptUrl))){theUrl=callFunction(theJavascriptUrl);}
+        if(!(isEmpty(theJavascriptTitle))){theTitle=callFunction(theJavascriptTitle);}
+        {!divid} =
+        {
+            url: theUrl,
+            title: theTitle,
+            colour: "{!buttonColour}",
+            layout: "{!layout}"
+        };
+        var fl = document.createElement("script");
+        fl.type = "text/javascript";
+        fl.async = true;
+        fl.src = "https://chatter.fluxgainlike.com/js/flike.js";
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(fl, s);
+    })();    
+    </script>
+</apex:component>

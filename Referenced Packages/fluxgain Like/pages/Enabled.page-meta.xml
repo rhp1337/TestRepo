@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApexPage xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>28.0</apiVersion>
+    <availableInTouch>true</availableInTouch>
+    <description>Page that sits inside the &quot;home page component&quot; &quot;fluxgain Like enabled&quot;</description>
+    <label>fluxgain Like enabled</label>
+</ApexPage>
